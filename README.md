@@ -1,5 +1,4 @@
-# Déploiement Azure App Service avec Domaine Personnalisé (Zone DNS uniquement)
-
+# Déploiement Azure App Service avec Domaine Personnalisé 
 Ce guide Terraform configure un App Service Azure qui héberge un conteneur Docker.
 
 Il crée également une zone DNS publique dans Azure (ex. : `myapp.com`) avec un enregistrement `CNAME` et un enregistrement `TXT` pour préparer l'ajout d’un domaine personnalisé.
@@ -14,6 +13,7 @@ Il crée également une zone DNS publique dans Azure (ex. : `myapp.com`) avec un
 - Provisione un certificat SSL managé (si les enregistrements DNS sont détectés)
 
 ## Architecture
+Ceci représente l'architecture de l'infra provisionnée via terraform :
 
 ![archi_infra](screen_shots/Brainboard%20-%20azure-app-service%20(1).png)
 
