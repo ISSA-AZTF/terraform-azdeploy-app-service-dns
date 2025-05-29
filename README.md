@@ -26,11 +26,10 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 
 ## Délégation DNS : comment faire d’Azure l'autorité pour votre domaine
 
-**(Suppose que la zone DNS myapp.com a déjà été créée dans Azure DNS)**
+`(Suppose que la zone DNS myapp.com a déjà été créée dans Azure DNS)`
 
 1. Acheter le domaine `myapp.com` chez un registrar (ex : OVH, Gandi, GoDaddy, Azure Domains…)
-2. Aller dans les paramètres DNS du registrar
-3. Remplacer les serveurs de noms (NS) par ceux fournis par Azure :
+2. Remplacer les serveurs de noms (NS) par ceux fournis par Azure :
 
  - ns1-06.azure-dns.com
 
@@ -40,9 +39,9 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 
  - ns4-06.azure-dns.info
 
-4. Attendre la propagation DNS (Quelques minutes à 48h)
-5. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
-6. Relancer le déploiement ou le binding du domaine si nécessaire
+3. Attendre la propagation DNS (Quelques minutes à 48h)
+4. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
+5. Relancer le déploiement ou le binding du domaine si nécessaire
 
 
 
