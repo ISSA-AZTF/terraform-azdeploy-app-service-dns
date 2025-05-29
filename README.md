@@ -24,7 +24,7 @@ Le domaine `myapp.com` n’est pas enregistré auprès d’un registrar ou acqui
 
 En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est pas acheté et délégué.
 
-## Étapes nécessaires pour activer réellement le domaine
+## Délégation DNS : comment faire d’Azure l'autorité pour votre domaine
 
 1. Acheter le domaine `myapp.com` chez un registrar (ex : OVH, Gandi, GoDaddy, Azure Domains…)
 2. Aller dans les paramètres DNS du registrar
