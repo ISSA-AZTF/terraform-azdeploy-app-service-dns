@@ -1,5 +1,5 @@
 # Déploiement Azure App Service avec Domaine Personnalisé 
-Ce guide Terraform configure un App Service Azure qui héberge un conteneur Docker.
+Ce guide Terraform configure un App Service Azure qui héberge un simple conteneur Docker `hello world`.
 
 Il crée également une zone DNS publique dans Azure (ex. : `myapp.com`) avec un enregistrement `CNAME` et un enregistrement `TXT` pour préparer l'ajout d’un domaine personnalisé.
 
