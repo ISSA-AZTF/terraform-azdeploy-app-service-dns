@@ -17,6 +17,12 @@ Ceci représente l'architecture de l'infra provisionnée via terraform :
 
 ![archi_infra](screen_shots/archi.png)
 
+## Déploiment Infra
+
+     terraform init
+     terraform plan -out myplan.plan
+     terraform apply
+
 
 ## Limite actuelle
 
@@ -41,7 +47,9 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 4. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
 5. Relancer le déploiement ou le binding du domaine si nécessaire
 
+## Destruction Infra
 
+      terraform destroy
 
 ## Conclusion
 
