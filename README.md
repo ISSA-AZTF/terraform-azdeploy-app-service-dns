@@ -30,13 +30,13 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 2. Aller dans les paramètres DNS du registrar
 3. Remplacer les serveurs de noms (NS) par ceux fournis par Azure :
 
-ns1-06.azure-dns.com
+   ns1-06.azure-dns.com
 
-ns2-06.azure-dns.net
+   ns2-06.azure-dns.net
 
-ns3-06.azure-dns.org
+   ns3-06.azure-dns.org
 
-ns4-06.azure-dns.info
+   ns4-06.azure-dns.info
 
 4. Attendre la propagation DNS (quelques minutes à 48h)
 5. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
