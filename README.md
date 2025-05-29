@@ -30,7 +30,6 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 
 1. Acheter le domaine `myapp.com` chez un registrar (ex : OVH, Gandi, GoDaddy, Azure Domains…)
 2. Remplacer les serveurs de noms (NS) par ceux fournis par Azure :
-
  - ns1-06.azure-dns.com
 
  - ns2-06.azure-dns.net
@@ -38,7 +37,6 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
  - ns3-06.azure-dns.org
 
  - ns4-06.azure-dns.info
-
 3. Attendre la propagation DNS (Quelques minutes à 48h)
 4. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
 5. Relancer le déploiement ou le binding du domaine si nécessaire
