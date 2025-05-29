@@ -23,6 +23,7 @@ Ceci représente l'architecture de l'infra provisionnée via terraform :
      terraform plan -out myplan.plan
      terraform apply
 
+![Deploy_infra](screen_shots/Infra.png)
 
 ## Limite actuelle
 
