@@ -26,7 +26,7 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 
 ## Délégation DNS : comment faire d’Azure l'autorité pour votre domaine
 
-(Suppose que la zone DNS myapp.com a déjà été créée dans Azure DNS)
+**(Suppose que la zone DNS myapp.com a déjà été créée dans Azure DNS)**
 
 1. Acheter le domaine `myapp.com` chez un registrar (ex : OVH, Gandi, GoDaddy, Azure Domains…)
 2. Aller dans les paramètres DNS du registrar
