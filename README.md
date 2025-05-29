@@ -31,8 +31,11 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 3. Remplacer les serveurs de noms (NS) par ceux fournis par Azure :
 
 ns1-06.azure-dns.com
+
 ns2-06.azure-dns.net
+
 ns3-06.azure-dns.org
+
 ns4-06.azure-dns.info
 
 4. Attendre la propagation DNS (quelques minutes à 48h)
