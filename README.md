@@ -15,7 +15,7 @@ Il crée également une zone DNS publique dans Azure (ex. : `myapp.com`) avec un
 ## Architecture
 Ceci représente l'architecture de l'infra provisionnée via terraform :
 
-![archi_infra](screen_shots/Brainboard%20-%20azure-app-service%20(1).png)
+![archi_infra](screen_shots/archi.png)
 
 
 ## Limite actuelle
