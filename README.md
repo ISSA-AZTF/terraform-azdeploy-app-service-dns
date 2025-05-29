@@ -42,7 +42,7 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 5. Vérifier avec `dig` ou `nslookup` que les enregistrements CNAME et TXT sont accessibles
 6. Relancer le déploiement ou le binding du domaine si nécessaire
 
-> Binding domaine app service non fonctionnel car 
+
 
 ## Conclusion
 
