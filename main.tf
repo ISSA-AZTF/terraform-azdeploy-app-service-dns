@@ -11,6 +11,7 @@ locals {
     "APPLICATIONINSIGHTS_CONNECTION_STRING" = azurerm_application_insights.app_insight["app_conf"].connection_string
   }
 }
+
 #***********************
 # Nombre aléatoire
 #***********************
