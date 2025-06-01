@@ -1,4 +1,16 @@
 
+#***************************
+# Locals 
+#**************************
+locals {
+  app_plan_name    = lower(format("%s-%s", "linux", "plan"))
+  command          = "${path.module}\\Import_Docker.ps1 -RegistryName ${azurerm_container_registry.acr.name}"
+  linux_fx_version = "Docker|${replace(azurerm_container_registry.acr.name, "_", "-")}.azurecr.io/hello-world:latest"
+  app_insight_link = {
+    "APPINSIGHTS_INSTRUMENTATIONKEY"        = azurerm_application_insights.app_insight["app_conf"].instrumentation_key
+    "APPLICATIONINSIGHTS_CONNECTION_STRING" = azurerm_application_insights.app_insight["app_conf"].connection_string
+  }
+}
 #***********************
 # Nombre aléatoire
 #***********************
@@ -147,16 +159,12 @@ resource "azurerm_app_service_custom_hostname_binding" "cust_domaine" {
   app_service_name    = azurerm_app_service.app.name
   resource_group_name = data.azurerm_resource_group.rg.name
   depends_on          = [azurerm_dns_txt_record.txt_record]
-  lifecycle {
-    ignore_changes = [ssl_state, thumbprint]
-  }
 }
 
 #***********************
 # Certificat SSL
 #***********************
 resource "azurerm_app_service_managed_certificate" "ssl" {
-  count                      = var.ssl_certificate == true ? 1 : 0
   custom_hostname_binding_id = azurerm_app_service_custom_hostname_binding.cust_domaine.id
   depends_on                 = [azurerm_dns_txt_record.txt_record]
 }
@@ -167,7 +175,7 @@ resource "azurerm_app_service_managed_certificate" "ssl" {
 resource "azurerm_app_service_certificate_binding" "ssl_cust_domaine" {
   count               = var.ssl_certificate && length(var.host_binding) > 0 ? 1 : 0
   hostname_binding_id = azurerm_app_service_custom_hostname_binding.cust_domaine.id
-  certificate_id      = azurerm_app_service_managed_certificate.ssl[0].id
+  certificate_id      = azurerm_app_service_managed_certificate.ssl.id
   ssl_state           = var.host_binding != null ? "SniEnabled" : null
 }
 
