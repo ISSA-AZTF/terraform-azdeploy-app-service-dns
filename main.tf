@@ -84,6 +84,7 @@ resource "terraform_data" "docker_image" {
 
     command     = local.command
     interpreter = ["PowerShell", "-Command"]
+    on_failure  = continue
   }
 
   depends_on = [azurerm_container_registry.acr]
