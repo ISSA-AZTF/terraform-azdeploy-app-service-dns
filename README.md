@@ -27,7 +27,9 @@ Ceci représente l'architecture de l'infra provisionnée via terraform :
 
 ## Limite actuelle
 
-Le domaine `myapp.com` n’est pas enregistré auprès d’un registrar ou acquis via `azure app service domains`. Par conséquent, même si la zone DNS existe dans Azure, elle n’est pas utilisée publiquement. Aucun serveur DNS public ne connaît cette zone.
+Le domaine `myapp.com` n’est pas enregistré auprès d’un registrar ou acquis via `azure app service domains`. 
+
+Par conséquent, même si la zone DNS existe dans Azure, elle n’est pas utilisée publiquement. Aucun serveur DNS public ne connaît cette zone.
 
 En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est pas acheté et délégué.
 
