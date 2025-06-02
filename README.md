@@ -8,7 +8,7 @@ Il crée également une zone DNS publique dans Azure (ex. : `myapp.com`) avec un
 - Déploie un App Service Linux basé sur un conteneur Docker
 - Crée une zone DNS publique dans Azure (myapp.com)
 - Ajoute un enregistrement CNAME pour www.myapp.com pointant vers l’App Service
-- Ajoute un enregistrement TXT asuid.www.myapp.com pour vérification du domaine
+- Ajoute un enregistrement TXT asuid.www pour vérification du domaine
 - Tente d’associer le domaine personnalisé à l’App Service
 - Provisione un certificat SSL managé (si les enregistrements DNS sont détectés)
 
