@@ -58,4 +58,4 @@ En résumé : le domaine n’est pas routable sur Internet tant qu’il n’est 
 
 ## Conclusion
 
-Ce setup terraform est prêt pour fonctionner avec un vrai domaine, mais en l’état, il ne peut pas exposer `www.myapp.com` publiquement tant que ce domaine n’est pas acquis et délégué correctement.
+Le setup Terraform est prêt, mais `www.myapp.com` sera public seulement après acquisition et délégation du domaine.
