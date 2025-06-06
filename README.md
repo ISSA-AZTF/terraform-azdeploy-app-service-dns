@@ -21,7 +21,7 @@ Ceci représente l'architecture de l'infra provisionnée via terraform :
 
      terraform init
      terraform plan -out myplan.plan
-     terraform apply
+     terraform apply myplan.plan
 
 ![Deploy_infra](screen_shots/Infra.png)
 
